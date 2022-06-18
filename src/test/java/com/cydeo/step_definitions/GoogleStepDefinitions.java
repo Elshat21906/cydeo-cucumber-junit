@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class GoogleStepDefinations {
+public class GoogleStepDefinitions {
 
     @When("user is on Google search page")
     public void user_is_on_google_search_page() {
