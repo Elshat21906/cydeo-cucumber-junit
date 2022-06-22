@@ -37,7 +37,8 @@ public class GoogleStepDefinitions {
         String actualTitle = Driver.getDriver().getTitle();
 
         Assert.assertEquals(actualTitle,expectedTitle);
-        Driver.closeDriver();
+
+
 
 
 
