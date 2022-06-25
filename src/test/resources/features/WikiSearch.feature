@@ -8,6 +8,6 @@ Feature: Wikipedia search functionality and verifications
 
   Scenario:Wikipedia Search Functionality Header Verification
     Given User is on Wikipedia home page
-    When  User types "史蒂夫·乔布斯 - 维基百科，自由的百科全书" in the wiki search box
+    When  User types "史蒂夫·乔布斯" in the wiki search box
     And   User clicks wiki search button
-    Then  User see the 史蒂夫·乔布斯 - 维基百科，自由的百科全书 is in the mean header
+    Then  User see the "史蒂夫·乔布斯" is in the main header
