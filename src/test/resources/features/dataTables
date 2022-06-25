@@ -1,0 +1,10 @@
+Feature: Examples Of Cucumber Data Table Implementation
+
+  Scenario: List Of Fruits I Like
+    Then  User should see fruits I like
+      | Apple      |
+      | Banana     |
+      | Cherry     |
+      | Peach      |
+      | Watermelon |
+      | Grapes     |
