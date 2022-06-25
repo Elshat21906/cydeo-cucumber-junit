@@ -50,18 +50,25 @@ public class BrowserUtils {
         //5. Assert:Title contains“Etsy”
         String actualTitle = Driver.getDriver().getTitle();
 
-
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
     }
 
-    //This method accepts a String "expectedTitle" and Asserts if it is true
 
+    //This method accepts a String "expectedTitle" and Asserts if it is true
     public static void verifyTitle(String expectedTitle){
 
         Assert.assertEquals(Driver.getDriver().getTitle(), expectedTitle);
 
     }
 
+
+    /**
+     * This method will accept a String as expected value and verify actual URL CONTAINS the value.
+     * @param expectedInURL
+     */
+    public static void verifyURLContains(String expectedInURL){
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInURL));
+    }
     /*
     Creating a  utility method for ExplicitWait, so  we don't have to repeat the line
      */
