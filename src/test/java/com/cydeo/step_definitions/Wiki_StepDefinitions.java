@@ -31,4 +31,10 @@ public class Wiki_StepDefinitions {
         //verify actual title contains string(coming from feature files)
         Assert.assertTrue(Driver.getDriver().getTitle().contains(string));
     }
+
+    @Then("User see the 史蒂夫·乔布斯 - 维基百科，自由的百科全书 is in the mean header")
+    public void userSeeThe史蒂夫乔布斯维基百科自由的百科全书IsInTheMeanHeader() {
+
+
+    }
 }
