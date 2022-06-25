@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                        // if dryRun is true: dryRun is turned on, and step definitions are turned off (will not run)
                        // if dryRUn is false: dryRun is turned off, and step definitions are turned on (will run)
                        // this is mostly used for when implementing new steps and step definitions, and we do not want to run the code and open browser etc.,just to get the snippets.
-        tags = "@ScenarioOutline" // What are tags and why we use them?
+        tags = "@wip" // What are tags and why we use them?
                                   // Tag allows us to create different scenario suites or groups to run
                                   // we can include, or exclude different feature files or scenarios using tags.
 
