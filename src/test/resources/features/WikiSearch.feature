@@ -1,8 +1,16 @@
 Feature: Wikipedia search functionality and verifications
 
-  //PARAMETERIZATION: CUCUMBER EXPRESSIONS
-  - this allow us to pass arguments to our steps from feature files
-  - allows us to do data driven testing
+  #PARAMETERIZATION: CUCUMBER EXPRESSIONS
+  #- this allow us to pass arguments to our steps from feature files
+  #- allows us to do data driven testing
+
+  #- Scenario outlines
+  # - Using scenario outlines, we can create a data table of examples, and run our scenario against this table.
+  # - Instead of using "Scenario" keyword, we use "Scenario Outline keyword"
+  # - After this step, it will not compile unless we provide a table of "Examples"
+  # - The arguments we provide in our steps become "header" for the "examples table"
+  # - and we provide rest of the data under headers.
+  #- we can pass more than one examples table under one scenario outline
 
 
   Scenario:Wikipedia Search Functionality Title Verification
