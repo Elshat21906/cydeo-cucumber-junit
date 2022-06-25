@@ -1,5 +1,10 @@
 Feature: Wikipedia search functionality and verifications
 
+  //PARAMETERIZATION: CUCUMBER EXPRESSIONS
+  - this allow us to pass arguments to our steps from feature files
+  - allows us to do data driven testing
+
+
   Scenario:Wikipedia Search Functionality Title Verification
    Given User is on Wikipedia home page
    When User types "史蒂夫·乔布斯 - 维基百科，自由的百科全书" in the wiki search box
