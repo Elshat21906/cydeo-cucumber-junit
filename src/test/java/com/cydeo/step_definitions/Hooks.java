@@ -4,6 +4,11 @@ package com.cydeo.step_definitions;
 In the class we will be able to pass pre- & post- conditions to
  each scenario and each step
  */
+/*
+ Hooks:Hooks are used to create pre- and post- conditions for scenarios and steps.
+ - When we are using Hooks, we need to be extra careful because all the logic we create will be implements for all the scenarios and/or steps in our project.
+ - We can specify using @tags if we want the pre- or post- condition to be applying to only certain steps or scenario
+ */
 
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.After;
