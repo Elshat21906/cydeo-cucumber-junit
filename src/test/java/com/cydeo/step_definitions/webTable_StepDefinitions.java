@@ -1,6 +1,7 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.WebTableLoginPage;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -27,13 +28,13 @@ public void user_is_on_the_login_page_of_table_app() {
     }
 
     @When("user clicks login button")
-public void user_clicks_login_button() {
+    public void user_clicks_login_button() {
         webTableLoginPage.loginButton.click();
 }
 
     @Then("user should see url contains order")
-public void user_should_see_url_contains_order() {
-       String actualUrl =  Driver.getDriver().getCurrentUrl();
+    public void user_should_see_url_contains_order() {
+        BrowserUtils.verifyURLContains("orders");
 }
 
 
