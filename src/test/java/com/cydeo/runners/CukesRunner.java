@@ -7,7 +7,10 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         //determines what type of report we want to generate with our project, and also where we want to store.
-        plugin = "html:target/cucumber-report.html",
+        plugin = {
+                "html:target/cucumber-report.html",
+                "rerun:target/rerun.txt"
+        },
 
         // we provide the path of the 'features' directory and let our project know where to find all the feature files.
         features = "src/test/resources/features",
