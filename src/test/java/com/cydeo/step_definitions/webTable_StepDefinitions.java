@@ -38,4 +38,10 @@ public void user_is_on_the_login_page_of_table_app() {
 }
 
 
+    @When("user enters username {string} password {string} and login")
+    public void userEntersUsernamePasswordAndLogin(String username, String password) {
+        webTableLoginPage.inputUsername.sendKeys(username);
+        webTableLoginPage.inputPassword.sendKeys(password);
+        webTableLoginPage.loginButton.click();
+    }
 }
