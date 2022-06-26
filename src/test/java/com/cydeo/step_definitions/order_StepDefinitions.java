@@ -12,6 +12,8 @@ public class order_StepDefinitions {
 
     @Given("user is already logged in and on order page")
     public void user_is_already_logged_in_and_on_order_page() {
+        
+        webTableLoginPage.login();
 
     }
     @When("user selects product type {string}")
