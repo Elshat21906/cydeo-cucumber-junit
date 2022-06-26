@@ -9,9 +9,8 @@ import java.util.List;
 
 public class OrderPage extends BasePage {
 
-
     public OrderPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(name = "product")
@@ -46,5 +45,7 @@ public class OrderPage extends BasePage {
 
     @FindBy(css = "button[type='submit']")
     public WebElement processOrderBtn;
+
+
 
 }
