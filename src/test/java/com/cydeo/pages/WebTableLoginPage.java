@@ -44,8 +44,8 @@ public class WebTableLoginPage {
         inputUsername.sendKeys(username);
         inputPassword.sendKeys(password);
         loginButton.click();
-
     }
+
 
     /**
      * This method will log in using credentials from

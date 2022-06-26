@@ -51,6 +51,7 @@ public void user_is_on_the_login_page_of_table_app() {
        // webTableLoginPage.inputPassword.sendKeys(credentials.get("password"));
        // webTableLoginPage.loginButton.click();
 
+        // We can call our login utility method and pass value from map
         webTableLoginPage.login(credentials.get("username"),credentials.get("password"));
     }
 
