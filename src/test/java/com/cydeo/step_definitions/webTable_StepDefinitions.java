@@ -44,4 +44,5 @@ public void user_is_on_the_login_page_of_table_app() {
         webTableLoginPage.inputPassword.sendKeys(password);
         webTableLoginPage.loginButton.click();
     }
+
 }
