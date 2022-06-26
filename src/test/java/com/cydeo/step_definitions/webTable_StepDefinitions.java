@@ -8,6 +8,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.Map;
+
 public class webTable_StepDefinitions {
 
     WebTableLoginPage webTableLoginPage = new WebTableLoginPage();
@@ -36,11 +38,22 @@ public void user_is_on_the_login_page_of_table_app() {
     public void user_should_see_url_contains_order() {
         BrowserUtils.verifyURLContains("orders");
 }
-
-
     @When("user enters username {string} password {string} and login")
     public void userEntersUsernamePasswordAndLogin(String username, String password) {
         webTableLoginPage.login(username,password);
     }
+
+
+    @When("User enters below credentials")
+    public void user_enters_below_credentials(Map<String,String> credentials) {
+
+       // webTableLoginPage.inputUsername.sendKeys(credentials.get("username"));
+       // webTableLoginPage.inputPassword.sendKeys(credentials.get("password"));
+       // webTableLoginPage.loginButton.click();
+
+        webTableLoginPage.login(credentials.get("username"),credentials.get("password"));
+    }
+
+
 
 }
