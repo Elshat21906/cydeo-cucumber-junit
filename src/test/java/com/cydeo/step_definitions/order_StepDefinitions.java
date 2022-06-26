@@ -10,7 +10,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class order_StepDefinitions {
 
@@ -79,8 +82,16 @@ public class order_StepDefinitions {
         orderPage.inputZip.sendKeys(string);
     }
     @When("user selects credit card type {string}")
-    public void user_selects_credit_card_type(String string) {
+    public void user_selects_credit_card_type(String expectedCardTypes) {
 
+        //This line will loop through the list and decide which radio button to click
+        List<WebElement> cardTypes = orderPage.cardType;
+
+        for (WebElement each : cardTypes) {
+            if(each.getAttribute("value").equals(expectedCardTypes)){
+                each.click();
+            }
+        }
     }
     @When("user enters credit card number {string}")
     public void user_enters_credit_card_number(String string) {

@@ -73,12 +73,16 @@ public class BrowserUtils {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInURL));
     }
 
-    /**
-     * This method will accept a dropdown as a WebElement
-     * and return all the options' text in a List of String.
-     * @param dropdownElement
-     * @return List<String> actualOptionsAsString
-     */
+    /*
+   Creating a  utility method for ExplicitWait, so  we don't have to repeat the line
+    */
+    public static void waitForInvisibilityOf(WebElement webElement){
+
+        Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
+        wait.until(ExpectedConditions.invisibilityOf(webElement));
+    }
+
 
     public static List<String> dropdownOptionsAsString(WebElement dropdownElement){
 
@@ -93,16 +97,23 @@ public class BrowserUtils {
         return actualOptionsAsString;
     }
 
-
-
-    /*
-    Creating a  utility method for ExplicitWait, so  we don't have to repeat the line
+    /**
+     * This method will accept a group radio buttons as a List of WebElement.
+     * It will loop through the List, and click to the radio button with provided attributeValue
+     * @param radioButtons
+     * @param attributeValue
      */
-    public static void waitForInvisibilityOf(WebElement webElement){
+    public static void clickRadioButton(List<WebElement> radioButtons, String attributeValue){
 
-        Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
-        wait.until(ExpectedConditions.invisibilityOf(webElement));
+        for (WebElement each : radioButtons) {
+
+            if (each.getAttribute("value").equalsIgnoreCase(attributeValue)){
+                each.click();
+            }
+        }
     }
+
+
+
 
 }
