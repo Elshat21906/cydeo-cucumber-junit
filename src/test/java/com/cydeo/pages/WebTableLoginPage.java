@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class WebTableLoginPage {
 
     public WebTableLoginPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(name = "username")
@@ -18,9 +18,8 @@ public class WebTableLoginPage {
     @FindBy(name = "password")
     public WebElement inputPassword;
 
-    @FindBy(xpath = "//button[@type='submit']")
+    @FindBy(xpath = "//button[.='Login']")
     public WebElement loginButton;
-
 
     /**
      * No parameters.
@@ -40,12 +39,11 @@ public class WebTableLoginPage {
      * @param username
      * @param password
      */
-    public void login(String username,String password){
+    public void login(String username, String password){
         inputUsername.sendKeys(username);
         inputPassword.sendKeys(password);
         loginButton.click();
     }
-
 
     /**
      * This method will log in using credentials from
@@ -53,8 +51,7 @@ public class WebTableLoginPage {
      */
     public void loginWithConfig(){
         inputUsername.sendKeys(ConfigurationReader.getProperty("web.table.username"));
-        inputPassword.sendKeys(ConfigurationReader.getProperty("web.table.password"));
+        inputPassword.sendKeys(ConfigurationReader.getProperty("web.table.pw"));
         loginButton.click();
     }
-
 }
