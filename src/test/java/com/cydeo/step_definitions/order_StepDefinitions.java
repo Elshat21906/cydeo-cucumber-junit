@@ -1,6 +1,9 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.BasePage;
 import com.cydeo.pages.WebTableLoginPage;
+import com.cydeo.utilities.ConfigurationReader;
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,12 +11,19 @@ import io.cucumber.java.en.When;
 public class order_StepDefinitions {
 
     WebTableLoginPage webTableLoginPage = new WebTableLoginPage();
+    BasePage basePage = new BasePage();
 
 
     @Given("user is already logged in and on order page")
     public void user_is_already_logged_in_and_on_order_page() {
-        
+        //Getting the page using URL from Configuration.properties
+        Driver.getDriver().get(ConfigurationReader.getProperty("webTableURL"));
+
+        //Calling our login method to login in to web table app
         webTableLoginPage.login();
+
+        //Clicking to "order" link to go order page
+        basePage.order.click();
 
     }
     @When("user selects product type {string}")
