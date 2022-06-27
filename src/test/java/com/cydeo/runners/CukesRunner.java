@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         plugin = {
                 "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
-                "me.jvt.cucumber.report.PrettyReports:target/cucumber",
+
         },
 
         // we provide the path of the 'features' directory and let our project know where to find all the feature files.
@@ -28,7 +28,7 @@ import org.junit.runner.RunWith;
         // What are tags and why we use them?
         // Tag allows us to create different scenario suites or groups to run
         // we can include, or exclude different feature files or scenarios using tags.
-        tags = "@femaleScientists"
+        tags = ""
 )
 public class CukesRunner {
 
