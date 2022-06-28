@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         //determines what type of report we want to generate with our project, and also where we want to store.
         plugin = {
+                //"pretty",
                 "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
                 //"me.jvt.cucumber.report.PrettyReports:target/cucumber",
@@ -28,7 +29,8 @@ import org.junit.runner.RunWith;
         // What are tags and why we use them?
         // Tag allows us to create different scenario suites or groups to run
         // we can include, or exclude different feature files or scenarios using tags.
-        tags = ""
+        tags = "",
+        publish = false
 )
 public class CukesRunner {
 
