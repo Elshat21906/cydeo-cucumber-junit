@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         plugin = {
                 "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
-
+                //"me.jvt.cucumber.report.PrettyReports:target/cucumber",
         },
 
         // we provide the path of the 'features' directory and let our project know where to find all the feature files.
